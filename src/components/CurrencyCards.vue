@@ -1,5 +1,5 @@
 <template>
-  <div class="tab-content">
+  <div class="tab-content currency__body">
     <!--TAB USD -->
     <div class="tab-pane active" id="tab_usd">
       <div class="input-wrapper">

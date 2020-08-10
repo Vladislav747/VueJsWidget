@@ -68,6 +68,11 @@ export default {
   line-height: 25px;
 }
 
+.currency__toolbar .currency__title span{
+  font-size: 21px;
+  line-height: 25px;
+}
+
 .currency__toolbar .nav-tabs {
   border: none;
   display: flex;
@@ -98,12 +103,13 @@ export default {
 }
 
 .currency__body {
-  padding: 23px 0 24px;
+  padding: 23px 24px;
 }
 
 .input-wrapper {
   display: flex;
   justify-content: flex-end;
+  align-items: center;
 }
 
 .input-wrapper #input__curr {
@@ -111,14 +117,20 @@ export default {
   border-bottom: 1px solid #D9D9D9;
   width: 121px;
   text-align: right;
+  font-size: 18px;
+  line-height: 21px;
 }
 
 .input-wrapper .currencyType {
   text-transform: uppercase;
+  font-size: 18px;
+  line-height: 21px;
+  color: #B9B9B9;
+  margin-left: 8px;
 }
 
 .cards {
-  padding: 23px 24px;
+  padding: 23px 0;
   display: flex;
   flex-wrap: wrap;
   /* margin: 0 -18px; */
@@ -154,6 +166,11 @@ export default {
   letter-spacing: 0.0171429px;
   text-transform: uppercase;
 }
+
+.card__item .second {
+  overflow: hidden;
+}
+
 
 .card__item .second span {
   font-size: 48px;

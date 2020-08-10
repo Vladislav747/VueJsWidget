@@ -1,5 +1,8 @@
 <template>
   <div class="currency__toolbar">
+    <div class="currency__title">
+      <span>Курс EUR сегодня</span>
+    </div>
     <div class="nav-wrapper">
       <a href="#" data-toggle="tab" @click="prevTabElement">
         <svg
