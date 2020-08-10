@@ -2,6 +2,7 @@
   "name": "vue_test",
   "version": "0.1.0",
   "private": true,
+  "homepage":"https://Vladislav747.github.io/VueJsWidget",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
