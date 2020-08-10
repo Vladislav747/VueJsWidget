@@ -49,7 +49,7 @@ export default {
 }
 
 #app {
-  width: 720px;
+  max-width: 720px;
   margin: 0 auto;
 }
 
@@ -57,6 +57,27 @@ export default {
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 8px 0 0 0;
+}
+
+@media screen and (max-width: 320px) {
+  .nav-wrapper {
+    margin: 0 -16px;
+  }
+}
+
+.nav-wrapper__link{
+  padding: 16px 32px; 
+}
+
+@media screen and (max-width: 320px) {
+  .nav-wrapper__link{
+    padding: 16px; 
+  }
+}
+
+.nav-wrapper__link:hover{
+  background-color: #eee;
 }
 
 .currency__toolbar {
@@ -73,9 +94,18 @@ export default {
   line-height: 25px;
 }
 
+.currency__toolbar .currency__title .currency__val{
+  text-transform: uppercase;
+}
+
+.currency__toolbar .nav-tabs--overflow{
+   overflow: hidden;
+}
+
 .currency__toolbar .nav-tabs {
   border: none;
   display: flex;
+  transform: translatex(0px);
 }
 
 .currency__toolbar .nav-tabs li {
@@ -83,10 +113,11 @@ export default {
 }
 
 .currency__toolbar .nav-tabs li a {
-  padding: 14px 31px;
+  padding: 16px 32px;
   display: block;
-  border-radius: 5px 5px 0 0;
+  border-radius: 6px 6px 0 0;
   text-transform: uppercase;
+  font-weight: 600;
 }
 
 .currency__toolbar .nav-tabs li a.active {
@@ -103,7 +134,7 @@ export default {
 }
 
 .currency__body {
-  padding: 23px 24px;
+  padding: 27px 24px;
 }
 
 .input-wrapper {
@@ -115,10 +146,11 @@ export default {
 .input-wrapper #input__curr {
   border: none;
   border-bottom: 1px solid #D9D9D9;
-  width: 121px;
+  width: 118px;
   text-align: right;
   font-size: 18px;
   line-height: 21px;
+  padding: 3px 5px;
 }
 
 .input-wrapper .currencyType {
@@ -126,14 +158,13 @@ export default {
   font-size: 18px;
   line-height: 21px;
   color: #B9B9B9;
-  margin-left: 8px;
+  margin-left: 2px;
 }
 
 .cards {
-  padding: 23px 0;
+  padding: 23px 0 27px;
   display: flex;
   flex-wrap: wrap;
-  /* margin: 0 -18px; */
   justify-content: space-between;
 }
 
@@ -150,7 +181,7 @@ export default {
   background: #FFFFFF;
   box-shadow: 0px 3px 6px rgba(157, 157, 157, 0.16);
   border-radius: 12px;
-  padding: 18px 30px;
+  padding: 18px 32px 19px;
 }
 
 @media screen and (max-width: 320px) {
@@ -165,10 +196,13 @@ export default {
   line-height: 28px;
   letter-spacing: 0.0171429px;
   text-transform: uppercase;
+  color: #B9B9B9;
+
 }
 
 .card__item .second {
   overflow: hidden;
+  padding: 17px 0 0 0;
 }
 
 
@@ -179,17 +213,28 @@ export default {
   text-transform: uppercase;
 }
 
+.card__item .second .second__cur{
+  font-size: 24px;
+  line-height: 28px;
+}
+
 .pagination-wrapper {
   display: flex;
   justify-content: space-between;
-  padding: 0 35%;
+  padding: 1% 33%;
+}
+
+@media screen and (max-width: 320px) {
+  .pagination-wrapper {
+    padding: 1% 8%;
+  }
 }
 
 .pagination_el span {
   box-shadow: 0px 5px 6px rgba(157, 157, 157, 0.16);
   border-radius: 8px;
   text-transform: uppercase;
-  padding: 10px 21px;
+  padding: 9px 32px;
   cursor: pointer;
   position: relative;
 }

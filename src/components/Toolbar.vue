@@ -1,10 +1,10 @@
 <template>
   <div class="currency__toolbar">
     <div class="currency__title">
-      <span>Курс EUR сегодня</span>
+      <span>Курс <span class="currency__val">{{currentEl}}</span> сегодня</span>
     </div>
     <div class="nav-wrapper">
-      <a href="#" data-toggle="tab" @click="prevTabElement">
+      <a href="#" class="nav-wrapper__link" @click="prevTabElement">
         <svg
           width="7"
           height="12"
@@ -15,19 +15,24 @@
           <path d="M7 10.58L2.9925 6L7 1.41L5.76625 0L0.51625 6L5.76625 12L7 10.58Z" fill="#CCAE68"></path>
         </svg>
       </a>
-
-      <ul class="nav nav-tabs">
-        <li class="nav__item" v-for="el in curenciesArr" :key="el">
-          <a
-            class="small"
-            href="#"
-            :class="{'active' : (el == currentEl)}"
-            @click.prevent="changeElement(el)"
-            data-cur="{el}"
-          >{{el}}</a>
-        </li>
-      </ul>
-      <a href="#" data-toggle="tab" @click="nextTabElement">
+      <div class="nav-tabs--overflow">
+        <ul 
+          class="nav nav-tabs"
+          ref="navtabs"
+        >
+          <li class="nav__item" v-for="el in curenciesArr" :key="el">
+            <a
+              class="small"
+              href="#"
+              :class="{'active' : (el == currentEl)}"
+              @click.prevent="changeElement(el)"
+              data-cur="{el}"
+            >{{el}}</a>
+          </li>
+        </ul>
+      </div>
+     
+      <a href="#" class="nav-wrapper__link" @click="nextTabElement">
         <svg
           width="7"
           height="12"
@@ -60,13 +65,10 @@ export default {
   },
   methods: {
     nextTabElement() {
-        
-       
-    //   console.log( el.updateData(this.curenciesArr));
       if (this.currentElNumber <= this.curenciesArr.length-1) {
         this.currentElNumber++;
-        this.currentEl = this.curenciesArr[this.currentElNumber - 1];
-        this.$emit("newElement", this.currentEl);
+        this.$refs.navtabs.style.transform = "translatex(90px)";
+        console.log(this.$refs.navtabs.style, "check2");
       }
     },
     prevTabElement() {
@@ -74,8 +76,7 @@ export default {
       console.log(this.currentElNumber);
       if (this.currentElNumber > 1) {
         this.currentElNumber--;
-        this.currentEl = this.curenciesArr[this.currentElNumber - 1];
-        this.$emit("newElement", this.currentEl);
+        this.$refs.navtabs.style.transform = "translatex(-90px)";
       }
     },
     changeElement(el) {
