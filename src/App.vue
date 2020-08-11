@@ -106,6 +106,8 @@ export default {
   border: none;
   display: flex;
   transform: translatex(0px);
+  list-style: none;
+  margin:0;
 }
 
 .currency__toolbar .nav-tabs li {

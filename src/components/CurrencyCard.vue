@@ -34,7 +34,7 @@ export default {
   methods: {
     calculateSum() {
         let el = new CurrencyWidget(this.convertCurrency, this.currency);
-        this.convertSum = this.sum * el.getData();
+        this.convertSum = (this.sum * el.getData()).toFixed(2);
     }
   }
 };

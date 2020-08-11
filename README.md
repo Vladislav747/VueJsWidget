@@ -1,3 +1,4 @@
-## Embeddable Vue Js Widget ##
+vue_test
+Deploy of Widget itself is here https://Vladislav747.github.io/VueJsWidget
 
-Сайт В deploy можно посмотреть тут https://vladislav747.github.io/layout-test/
+To put it on your page use <iframe> element

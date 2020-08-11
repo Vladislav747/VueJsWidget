@@ -18,10 +18,10 @@ class CurrencyWidget {
         let symbolsString = this.url + '?symbols=' + this.currency + '&' + 'base=' + this.baseCurrency;
         return symbolsString;
     }
+
  
     // Обновление данных о погоде
     getData(){
-        //currencies.forEach(el => symbolsString += el.toUpperCase()+',');
         this.url = this.generateURL();
         var result = "";
         console.table(this.currency, this.baseCurrency);
@@ -38,11 +38,7 @@ class CurrencyWidget {
             // вывести результат
             console.log( xhr.responseText, "xhr" );
             var resultJSON = JSON.parse(xhr.responseText);
-            var resultString = resultJSON.rates[this.currency].toFixed(2);
-            // var result1 = resultString.split('.');
-            // result1[1] = result1[1].substr(2, result1[1].length);
-            // console.log(typeof resultString);
-            result = resultString;
+            result = resultJSON.rates[this.currency].toFixed(2);
 
           }
 
