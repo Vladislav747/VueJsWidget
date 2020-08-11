@@ -120,6 +120,7 @@ export default {
   border-radius: 6px 6px 0 0;
   text-transform: uppercase;
   font-weight: 600;
+  text-decoration: none;
 }
 
 .currency__toolbar .nav-tabs li a.active {
