@@ -7,3 +7,5 @@ You can also use customize with this widget https://Vladislav747.github.io/VueJs
 
 Example:
 "https://Vladislav747.github.io/VueJsWidget/?backgroundColor=red" will make Widget red
+
+Test page https://vladislav747.github.io/VueJsWidget/test.html
