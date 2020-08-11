@@ -38,7 +38,8 @@
         </div>
       </div>
     </div>
-    <iframe src="https://vladislav747.github.io/VueJsWidget/" width="100%" height="800px"></iframe>
+    <!-- Frame -->
+    <iframe id="frame" src="https://vladislav747.github.io/VueJsWidget/" width="100%" height="800px"></iframe>
     <!-- Jquery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <!-- Bootstrap-->
@@ -47,10 +48,10 @@
     <script type="text/javascript">
         $('#btn-send').click(function(){
             let inputData = document.getElementById("inputGroupSelect04").value;
-            let baseUrl = ' https://Vladislav747.github.io/VueJsWidget/'
-            let src = `${ baseUrl }?backgroundColor=${ bg }`
+            let baseUrl = ' https://Vladislav747.github.io/VueJsWidget/';
+            let frame = document.getElementById('frame');
+            let src = `${ baseUrl }?backgroundColor=${ inputData }`
             frame.setAttribute('src', src);
-            console.log(inputData);
         });
        
     </script>
