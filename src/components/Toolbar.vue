@@ -67,8 +67,7 @@ export default {
     nextTabElement() {
       if (this.currentElNumber <= this.curenciesArr.length-1) {
         this.currentElNumber++;
-        this.$refs.navtabs.style.transform = "translatex(90px)";
-        console.log(this.$refs.navtabs.style, "check2");
+        this.$refs.navtabs.style.transform = "translatex(74px)";
       }
     },
     prevTabElement() {
