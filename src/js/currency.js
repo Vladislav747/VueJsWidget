@@ -36,8 +36,7 @@ class CurrencyWidget {
           } else {
             // вывести результат
             var resultJSON = JSON.parse(xhr.responseText);
-            result = resultJSON.rates[this.currency].toFixed(2);
-
+            result = resultJSON.rates[this.currency];
           }
 
         return result;
