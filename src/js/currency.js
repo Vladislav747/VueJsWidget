@@ -24,7 +24,6 @@ class CurrencyWidget {
     getData(){
         this.url = this.generateURL();
         var result = "";
-        console.table(this.currency, this.baseCurrency);
 
         var xhr = new XMLHttpRequest();
     
@@ -37,7 +36,6 @@ class CurrencyWidget {
           } else {
             // вывести результат
             console.log( xhr.responseText, "xhr" );
-            var resultJSON = JSON.parse(xhr.responseText);
             result = resultJSON.rates[this.currency];
           }
 
