@@ -1,5 +1,10 @@
 <template>
-  <div class="currency__toolbar">
+  <div 
+    class="currency__toolbar"
+     :style="{
+      'background-color': backgroundColor
+    }"
+  >
     <div class="currency__title">
       <span>Курс <span class="currency__val">{{currentEl}}</span> сегодня</span>
     </div>
@@ -60,8 +65,14 @@ export default {
     return {
       curenciesArr: ["usd", "rub", "nok", "jpy", "eur", "cad"],
       currentEl: "eur",
-      currentElNumber: 5
+      currentElNumber: 5,
+      backgroundColor: "#FFE782",
     };
+  },
+  mounted(){
+    let query = this.$router.currentRoute.query;
+    console.log(query);
+    this.backgroundColor = query.backgroundColor;
   },
   methods: {
     nextTabElement() {

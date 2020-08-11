@@ -25,15 +25,15 @@
                 <label for="recipient-name" class="col-form-label">Выберите цвет виджета:</label>
                 <select class="custom-select" id="inputGroupSelect04" aria-label="Example select with button addon">
                     <option value="red">Красный</option>
-                    <option value="2">Желтый</option>
-                    <option value="3">Фиолетовый</option>
+                    <option value="yellow">Желтый</option>
+                    <option value="purple">Фиолетовый</option>
                 </select>
               </div>
             </form>
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary" id="">Send message</button>
+            <button type="button" class="btn btn-primary" id="btn-send">Send message</button>
           </div>
         </div>
       </div>
@@ -45,8 +45,14 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
     <!-- Script for modal windown -->
     <script type="text/javascript">
-        var inputData = document.getElementById("inputGroupSelect04);
-        console.log(inputData);
+        $('#btn-send').click(function(){
+            let inputData = document.getElementById("inputGroupSelect04").value;
+            let baseUrl = ' https://Vladislav747.github.io/VueJsWidget/'
+            let src = `${ baseUrl }?backgroundColor=${ bg }`
+            frame.setAttribute('src', src);
+            console.log(inputData);
+        });
+       
     </script>
 </body>
 </html>
