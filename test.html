@@ -22,8 +22,12 @@
           <div class="modal-body">
             <form>
               <div class="form-group">
-                <label for="recipient-name" class="col-form-label">Данные:</label>
-                <input type="text" class="form-control" id="data-name">
+                <label for="recipient-name" class="col-form-label">Выберите цвет виджета:</label>
+                <select class="custom-select" id="inputGroupSelect04" aria-label="Example select with button addon">
+                    <option value="red">Красный</option>
+                    <option value="2">Желтый</option>
+                    <option value="3">Фиолетовый</option>
+                </select>
               </div>
             </form>
           </div>
@@ -39,8 +43,9 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <!-- Bootstrap-->
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <!-- Script for modal windown -->
     <script type="text/javascript">
-        var inputData = document.getElementById("data-name");
+        var inputData = document.getElementById("inputGroupSelect04);
         console.log(inputData);
     </script>
 </body>
